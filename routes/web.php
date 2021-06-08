@@ -17,9 +17,24 @@ Route::post('/admin/create/save',[
     'create_save'
 ])->name('admin.create.save');
 
-Route::get('/', function () {
-    return view('index');
-}); 
-Route::get('/watch', function () {
-    return view('watch');
-});
+
+Route::get('/admin/update/{id}',[
+    App\Http\Controllers\VideoController::class,
+    'update'
+])->name('admin.update');
+
+Route::post('/admin/update/{id}/save',[
+    App\Http\Controllers\VideoController::class,
+    'update_save'
+])->name('admin.update.save');
+
+
+
+Route::get('/', [
+    App\Http\Controllers\HomeController::class,
+    'index'
+]); 
+Route::get('/watch/{id}', [
+    App\Http\Controllers\HomeController::class,
+    'watch'
+]);

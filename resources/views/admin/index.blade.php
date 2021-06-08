@@ -18,20 +18,22 @@
         <tr>
             <th>Title</th>
             <th>Category</th>
-            <th>Banner</th>
-            <th>Video</th>
+            <th>Banner</th> 
             <th></th>
         </tr>
-        <tr>
-            <td>Avatar</td>
-            <td>Trending</td>
-            <td><img src="" alt=""></td>
-            <td><img src="" alt=""></td>
-            <td>
-                <a href="">updated</a>
-                <a href="">delete</a>
-            </td>
-        </tr>
+        @foreach($data as $x)
+            <tr>
+                <td>{{ $x->title }}</td>
+                <td>{{ $x->category }}</td> 
+                <td>
+                    <img src="{{ URL::asset('storage/'.$x->banner) }}" height="100px">
+                </td> 
+                <td>
+                    <a href="{{ URL::route('admin.update', $x->id) }}">update</a>
+                    <a href="">delete</a>
+                </td>
+            </tr>
+        @endforeach
     </table>
 </body>
 </html>
