@@ -13,6 +13,7 @@
             border: 1px solid black;
         }
     </style>
+    <a href="{{ URL::route('admin.create') }}">Create new</a>
     <table cellspacing="0" cellpadding="0" width="100%">
         <tr>
             <th>Title</th>

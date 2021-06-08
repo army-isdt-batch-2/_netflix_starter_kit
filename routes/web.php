@@ -12,6 +12,11 @@ Route::get('/admin/create',[
     'create'
 ])->name('admin.create');
 
+Route::post('/admin/create/save',[
+    App\Http\Controllers\VideoController::class,
+    'create_save'
+])->name('admin.create.save');
+
 Route::get('/', function () {
     return view('index');
 }); 

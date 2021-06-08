@@ -13,8 +13,9 @@
             border: 1px solid black;
         }
     </style>
-    <form action="" method="">
+    <form enctype="multipart/form-data" action="{{ URL::route('admin.create.save') }}" method="post">
         @csrf
+        <!-- 419 error | Page Expired -->
 
         <input type="text" name="title" required placeholder="Title"><br>
         <select name="category"> 
