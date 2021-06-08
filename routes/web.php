@@ -7,6 +7,11 @@ Route::get('/admin',[
     'index'
 ])->name('admin');
 
+Route::get('/admin/create',[
+    App\Http\Controllers\VideoController::class,
+    'create'
+])->name('admin.create');
+
 Route::get('/', function () {
     return view('index');
 }); 

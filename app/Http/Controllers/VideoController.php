@@ -19,4 +19,9 @@ class VideoController extends Controller
     {
         return view('admin.index');
     }
+    
+    public function create()
+    {
+        return view('admin.create');
+    }
 }
