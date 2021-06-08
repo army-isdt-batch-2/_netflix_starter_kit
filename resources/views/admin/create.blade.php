@@ -16,7 +16,7 @@
     <form action="" method="">
         @csrf
 
-        <input type="text" name="title" required placeholder="Title">
+        <input type="text" name="title" required placeholder="Title"><br>
         <select name="category"> 
             <option>Top 10 in the Philippines today</option>
             <option>Trending Now</option>
@@ -25,9 +25,9 @@
             <option>Comedies</option>
             <option>Sci-Fi Thrillers</option>
             <option>Only on Netflix</option> 
-        </select>
-        <input type="file" name="file1" required placeholder="Title">
-        <input type="file" name="file2" required placeholder="Title">
+        </select><br>
+        <input type="file" name="file1" required placeholder="Title"><br>
+        <input type="file" name="file2" required placeholder="Title"><br>
         <button>Save</button>
     </form>
 </body>
